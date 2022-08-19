@@ -1,0 +1,59 @@
+header {
+    display: flex;
+    position: relative;
+    nav {
+        background-color: $color3;
+        box-shadow: 2px 0px 5px 2px #424242;
+        @include size(400px, 100vh);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .5s ease-in-out;
+        ul {
+            padding: 100px 0px 20px 0px;
+            li {
+                color: $color4;
+                display: block;
+                font-size: 2em;
+                padding: 10px, 50px;
+                &:hover {
+                    background-color: $color4;
+                    color: $color3;
+                }
+            }
+        }
+    }
+}
+
+.logo {
+    @include size(4em, 4em);
+}
+
+.menu-bars {
+    @include size(30px, 30px);
+    position: absolute;
+    cursor: pointer;
+    right: 1em;
+    top: 1em;
+    span {
+        display: block;
+        @include size(100%, 2px);
+        background-color: $color1;
+        margin-top: 6px;
+        transform-origin: 0px 100%;
+        transition: all 0.3s;
+    }
+}
+
+.activelinea1-menu-bar {
+    transform: rotate(45deg) translate(-2px, 1px);
+}
+
+.activelinea2-menu-bar {
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.activelinea3-menu-bar {
+    transform: rotate(-45deg) translate(-4px, 2px);
+}

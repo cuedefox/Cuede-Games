@@ -1,2 +1,14 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 $color1: #EC651A;
 $color2: #42EDE7;
+$color3: #071a19;
+$color4: #ffffff;
+@mixin size($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
