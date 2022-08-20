@@ -1,13 +1,16 @@
 function inicializarElementos () {
-    menu = document.querySelector(".menu-bars");
+    menu = document.querySelector("#menu");
+    menuButton = document.querySelector(".menu-bars");
     linea1MenuBar = document.querySelector(".linea1-menu-bar");
     linea2MenuBar = document.querySelector(".linea2-menu-bar");
     linea3MenuBar = document.querySelector(".linea3-menu-bar");
 }
 
 function inicializarEventos () {
-    menu.onclick = () => {
+    menuButton.onclick = () => {
         animateBars();
+        menu.classList.toggle("active-menu");
+        document.body.classList.toggle("opacity-menu");
     }
 }
 
@@ -18,6 +21,7 @@ function animateBars() {
 }
 
 let menu;
+let menuButton;
 let linea1MenuBar;
 let linea2MenuBar;
 let linea3MenuBar;

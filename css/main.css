@@ -207,7 +207,7 @@ sub {
 sup {
   top: -0.5em; }
 
-a {
+a, a:hover {
   color: var(--bs-link-color);
   text-decoration: underline; }
 
@@ -242,7 +242,7 @@ code {
   color: var(--bs-code-color);
   word-wrap: break-word; }
 
-a > code {
+a > code, a:hover > code {
   color: inherit; }
 
 kbd {
@@ -8884,7 +8884,7 @@ textarea.form-control-lg {
   margin: 0;
   box-sizing: border-box; }
 
-a {
+a, a:hover {
   text-decoration: none;
   color: inherit; }
 
@@ -8914,7 +8914,7 @@ header {
     box-shadow: 2px 0px 5px 2px #424242;
     width: 400px;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     transition: all .5s ease-in-out; }
@@ -8924,22 +8924,34 @@ header {
         color: #ffffff;
         display: block;
         font-size: 2em;
-        padding: 10px, 50px; }
+        padding: 10px 50px;
+        cursor: pointer; }
         header nav ul li:hover {
           background-color: #ffffff;
           color: #071a19; }
 
+.active-menu {
+  transform: translate(-600px); }
+
+.opacity-menu {
+  background-color: #00000080;
+  transition: all .5s ease; }
+
 .logo {
-  width: 4em;
-  height: 4em; }
+  width: 3.6em;
+  height: 3.6em;
+  position: fixed;
+  left: 2em;
+  top: 1em; }
 
 .menu-bars {
   width: 30px;
   height: 30px;
-  position: absolute;
+  position: fixed;
   cursor: pointer;
-  right: 1em;
-  top: 1em; }
+  right: 3em;
+  top: 2em;
+  transform: scale(200%); }
   .menu-bars span {
     display: block;
     width: 100%;

@@ -5,7 +5,7 @@ header {
         background-color: $color3;
         box-shadow: 2px 0px 5px 2px #424242;
         @include size(400px, 100vh);
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         transition: all .5s ease-in-out;
@@ -15,7 +15,8 @@ header {
                 color: $color4;
                 display: block;
                 font-size: 2em;
-                padding: 10px, 50px;
+                padding: 10px 50px;
+                cursor: pointer;
                 &:hover {
                     background-color: $color4;
                     color: $color3;
@@ -25,16 +26,29 @@ header {
     }
 }
 
+.active-menu {
+    transform: translate(-600px);
+}
+
+.opacity-menu {
+    background-color: #00000080;
+    transition: all .5s ease;
+}
+
 .logo {
-    @include size(4em, 4em);
+    @include size(3.6em, 3.6em);
+    position: fixed;
+    left: 2em;
+    top: 1em;
 }
 
 .menu-bars {
     @include size(30px, 30px);
-    position: absolute;
+    position: fixed;
     cursor: pointer;
-    right: 1em;
-    top: 1em;
+    right: 3em;
+    top: 2em;
+    transform: scale(200%);
     span {
         display: block;
         @include size(100%, 2px);
