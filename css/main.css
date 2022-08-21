@@ -8910,6 +8910,8 @@ header {
   display: flex;
   position: relative; }
   header nav {
+    background-color: #071a19; }
+  header #menu {
     background-color: #071a19;
     box-shadow: 2px 0px 5px 2px #424242;
     width: 400px;
@@ -8918,15 +8920,15 @@ header {
     top: 0;
     left: 0;
     transition: all .5s ease-in-out; }
-    header nav ul {
+    header #menu ul {
       padding: 100px 0px 20px 0px; }
-      header nav ul li {
+      header #menu ul li {
         color: #ffffff;
         display: block;
         font-size: 2em;
         padding: 10px 50px;
         cursor: pointer; }
-        header nav ul li:hover {
+        header #menu ul li:hover {
           background-color: #ffffff;
           color: #071a19; }
 
@@ -8971,6 +8973,10 @@ header {
 .activelinea3-menu-bar {
   transform: rotate(-45deg) translate(-4px, 2px); }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 880px) {
   .menu-bars {
+    display: none; } }
+
+@media screen and (max-width: 880px) {
+  nav {
     display: none; } }

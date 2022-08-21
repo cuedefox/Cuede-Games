@@ -3,6 +3,9 @@ header {
     position: relative;
     nav {
         background-color: $color3;
+    }
+    #menu {
+        background-color: $color3;
         box-shadow: 2px 0px 5px 2px #424242;
         @include size(400px, 100vh);
         position: fixed;
