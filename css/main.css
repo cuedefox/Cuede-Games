@@ -8908,52 +8908,23 @@ h6 {
 
 header {
   display: flex;
+  background-color: #071a19;
   position: relative; }
-  header nav {
-    background-color: #071a19; }
-  header #menu {
-    background-color: #071a19;
-    box-shadow: 2px 0px 5px 2px #424242;
-    width: 400px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transition: all .5s ease-in-out; }
-    header #menu ul {
-      padding: 100px 0px 20px 0px; }
-      header #menu ul li {
-        color: #ffffff;
-        display: block;
-        font-size: 2em;
-        padding: 10px 50px;
-        cursor: pointer; }
-        header #menu ul li:hover {
-          background-color: #ffffff;
-          color: #071a19; }
-
-.active-menu {
-  transform: translate(-600px); }
-
-.opacity-menu {
-  background-color: #00000080;
-  transition: all .5s ease; }
 
 .logo {
   width: 3.6em;
   height: 3.6em;
-  position: fixed;
-  left: 2em;
-  top: 1em; }
+  position: absolute;
+  left: 1em; }
 
 .menu-bars {
   width: 30px;
   height: 30px;
-  position: fixed;
   cursor: pointer;
-  right: 3em;
-  top: 2em;
-  transform: scale(200%); }
+  transform: scale(200%);
+  position: absolute;
+  right: 2em;
+  top: 1.5em; }
   .menu-bars span {
     display: block;
     width: 100%;
@@ -8973,10 +8944,34 @@ header {
 .activelinea3-menu-bar {
   transform: rotate(-45deg) translate(-4px, 2px); }
 
-@media screen and (min-width: 880px) {
-  .menu-bars {
-    display: none; } }
+.active-menu {
+  transform: translate(-600px); }
 
-@media screen and (max-width: 880px) {
-  nav {
-    display: none; } }
+.opacity-menu {
+  background-color: #00000080;
+  transition: all .5s ease; }
+
+#menu {
+  background-color: #071a19;
+  box-shadow: 2px 0px 5px 2px #424242;
+  width: 400px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all .5s ease-in-out; }
+  #menu ul {
+    padding: 100px 0px 20px 0px; }
+    #menu ul li {
+      color: #ffffff;
+      display: block;
+      font-size: 2em;
+      padding: 10px 50px;
+      cursor: pointer; }
+      #menu ul li:hover {
+        background-color: #ffffff;
+        color: #071a19; }
+
+footer {
+  background-color: #071a19;
+  color: #ffffff; }
