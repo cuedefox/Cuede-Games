@@ -1,30 +1,60 @@
-header {
+.menu {
+    background-color: $color1;
+    @include size(100vw, 75px);
     display: flex;
-    background-color: $color3;
-    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    box-shadow: 5px 0 10px rgba($color: #000000, $alpha: .6)
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    margin-top: 13px;
+    li {
+        border-radius: 3px;
+        margin: 0 5px;
+        .active {
+            @extend li:hover;
+        }
+        &:hover {
+            background-color: rgba($color: #000000, $alpha: .3);
+            transition: .4s;
+        }
+        a {
+            padding: 7px 13px;
+            font-size: 1em;
+            display: block;
+            text-transform: uppercase;
+            color: #fff;
+        }
+    }
+}
+
+ul.show {
+    top: 65px;
 }
 
 .logo {
-    @include size(3.6em, 3.6em);
-    position: absolute;
-    left: 1em;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    h2 {
+        color: #fff;
+        padding-left: .3em;
+        top: 1em;
+        padding-top: .3em;
+    }
+    img {
+        @include size(3.4em, 3.4em);
+    }
 }
 
 .menu-bars {
-    @include size(30px, 30px);
-    cursor: pointer;
-    transform: scale(200%);
-    position: absolute;
-    right: 2em;
-    top: 1.5em;
-    span {
-        display: block;
-        @include size(100%, 2px);
-        background-color: $color1;
-        margin-top: 6px;
-        transform-origin: 0px 100%;
-        transition: all 0.3s;
-    }
+    display: none;
 }
 
 .activelinea1-menu-bar {

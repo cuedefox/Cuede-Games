@@ -1,14 +1,25 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    outline: 0;
     box-sizing: border-box;
 }
 
-$color1: #EC651A;
-$color2: #42EDE7;
-$color3: #071a19;
-$color4: #ffffff;
-@mixin size($ancho, $alto) {
-    width: $ancho;
-    height: $alto;
+*::before {
+    @extend *;
+}
+
+*::after {
+    @extend *;
+}
+
+$color-cuede: #ec651a;
+$color1: #52006A;
+$color2: #CD113B;
+$color3: #FF7600;
+$color4: #FFA900;
+
+@mixin size($a, $b) {
+    width: $a;
+    height: $b;
 }
